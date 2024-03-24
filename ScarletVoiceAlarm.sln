@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScarletVoiceAlarm.Server", "ScarletVoiceAlarm.Server\ScarletVoiceAlarm.Server.csproj", "{5A3586E2-A9E7-4D1C-8AA1-7F7B80017D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScarletVoiceAlarm.Client", "ScarletVoiceAlarm.Client\ScarletVoiceAlarm.Client.csproj", "{288B2DA5-4D0C-4407-8AC0-59F7E58DDCED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A3586E2-A9E7-4D1C-8AA1-7F7B80017D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3586E2-A9E7-4D1C-8AA1-7F7B80017D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3586E2-A9E7-4D1C-8AA1-7F7B80017D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3586E2-A9E7-4D1C-8AA1-7F7B80017D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288B2DA5-4D0C-4407-8AC0-59F7E58DDCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288B2DA5-4D0C-4407-8AC0-59F7E58DDCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288B2DA5-4D0C-4407-8AC0-59F7E58DDCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288B2DA5-4D0C-4407-8AC0-59F7E58DDCED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00A23EBD-7184-4559-80C4-44DB9F6E2586}
+	EndGlobalSection
+EndGlobal

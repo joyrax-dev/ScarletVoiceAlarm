@@ -1,0 +1,46 @@
+{
+  "Listen": {
+    "Host": "127.0.0.1",
+    "Port": 5050
+  },
+  "KeyBindings": [
+    {
+      "Key": "Q",
+      "Locations": [ "Reception" ]
+    },
+    {
+      "Key": "W",
+      "Locations": [ "Module1" ]
+    },
+    {
+      "Key": "E",
+      "Locations": [ "Module2" ]
+    },
+    {
+      "Key": "R",
+      "Locations": [ "Module3" ]
+    }
+  ],
+  "Locations": [
+    {
+      "Name": "Reception",
+      "Host": "192.168.10.3",
+      "Port": 5050
+    },
+    {
+      "Name": "Module1",
+      "Host": "192.168.10.3",
+      "Port": 5050
+    },
+    {
+      "Name": "Module2",
+      "Host": "192.168.10.3",
+      "Port": 5050
+    },
+    {
+      "Name": "Module3",
+      "Host": "192.168.10.3",
+      "Port": 5050
+    }
+  ]
+}
