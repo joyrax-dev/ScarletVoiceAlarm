@@ -5,12 +5,14 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows.Input;
+using System.Windows.Markup;
 
 namespace ScarletVoiceAlarm.Server
 {
     internal class Program
     {
         private static Key? PressedKey = null;
+        private static UdpClient udpClient = new UdpClient();
 
         static void Main(string[] args)
         {
@@ -28,6 +30,7 @@ namespace ScarletVoiceAlarm.Server
             WaveInEvent waveIn = new WaveInEvent();
             waveIn.DeviceNumber = 0;
             waveIn.DataAvailable += OnRecordData;
+            waveIn.WaveFormat = new WaveFormat(44100, 1);
             waveIn.StartRecording();
 
             KeyboardHook kbh = new KeyboardHook();
@@ -46,15 +49,32 @@ namespace ScarletVoiceAlarm.Server
                 
                 if (binding.SystemKey == PressedKey)
                 {
+                    List<Locations> accessLocations = new List<Locations>();
+                    Locations[]? locations = Configuration.Config?.Locations;
+
                     Console.Write("Sended voice to [");
                     foreach (string loc in binding.Locations)
                     {
+                        for (int i1 = 0; i1 < locations?.Length; i1++)
+                        {
+                            Locations location = locations[i1];
+
+                            if (location.Name == loc)
+                            {
+                                accessLocations.Add(location);
+                            }
+                        }
+                        
                         Console.Write(" " + loc + " ");
+                    }
+                    foreach (Locations location in accessLocations)
+                    {
+                        int bytes = udpClient.Send(e.Buffer, location.EndPoint);
                     }
                     Console.Write("]\n");
                 }
             }
-        }
+        }  
 
         private static void OnKeyPress(object? sender, KeyboardHookEventArgs e)
         {

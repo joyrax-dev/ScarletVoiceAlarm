@@ -1,7 +1,7 @@
 {
   "Listen": {
     "Host": "127.0.0.1",
-    "Port": 5050
+    "Port": 5051
   },
   "KeyBindings": [
     {
@@ -24,23 +24,23 @@
   "Locations": [
     {
       "Name": "Reception",
-      "Host": "192.168.10.3",
-      "Port": 5050
+      "Host": "127.0.0.1",
+      "Port": 5051
     },
     {
       "Name": "Module1",
-      "Host": "192.168.10.3",
-      "Port": 5050
+      "Host": "127.0.0.1",
+      "Port": 5051
     },
     {
       "Name": "Module2",
-      "Host": "192.168.10.3",
-      "Port": 5050
+      "Host": "127.0.0.1",
+      "Port": 5051
     },
     {
       "Name": "Module3",
-      "Host": "192.168.10.3",
-      "Port": 5050
+      "Host": "127.0.0.1",
+      "Port": 5051
     }
   ]
 }
