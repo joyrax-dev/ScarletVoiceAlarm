@@ -1,7 +1,9 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using NAudio.Dsp;
 using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 
 namespace ScarletVoiceAlarm.Client
 {
@@ -12,7 +14,7 @@ namespace ScarletVoiceAlarm.Client
             using UdpClient udpServer = new UdpClient(5051);
             Console.WriteLine("UDP-сервер запущен...");
             WaveOutEvent outEvent = new WaveOutEvent();
-            BufferedWaveProvider waveBuffer = new BufferedWaveProvider(new WaveFormat(44100, 1));
+            BufferedWaveProvider waveBuffer = new BufferedWaveProvider(new WaveFormat(44100, 16, 1));
             outEvent.Init(waveBuffer);
             outEvent.Play();
 
